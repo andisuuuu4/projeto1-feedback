@@ -1,7 +1,16 @@
 import iconStar from "../assets/icon-star.svg"
 import { InputButton } from "./InputButton"
 
-export function Cardinicial({ handleChangeRateNote, handleSubmit }) { 
+export function Cardinicial({ setRateNote, setSubmited, rateNote }) { 
+    function handleSubmit() {
+        if (rateNote !== 0) {
+          setSubmited(true)
+          return
+        }
+    
+        alert("Please, choose a rate button!")
+      }
+
     return(
         <div className="bg-radial-gradient max-w-103 px-6 pt-6 pb-8  rounded-2xlfont-overpass">
         <div className="bg-dark-blue p-4 w-fit rounded-full mb-4">
@@ -14,11 +23,11 @@ export function Cardinicial({ handleChangeRateNote, handleSubmit }) {
            melhorar nosso atendimento!</p>
  
            <div className="flex justify-between mb-6">
-             <InputButton value={1} handleChangeRateNote={handleChangeRateNote}/>
-             <InputButton value={2} handleChangeRateNote={handleChangeRateNote}/>
-             <InputButton value={3} handleChangeRateNote={handleChangeRateNote}/>
-             <InputButton value={4} handleChangeRateNote={handleChangeRateNote}/>
-             <InputButton value={5} handleChangeRateNote={handleChangeRateNote}/>
+             <InputButton value={1} handleChangeRateNote={setRateNote}/>
+             <InputButton value={2} handleChangeRateNote={setRateNote}/>
+             <InputButton value={3} handleChangeRateNote={setRateNote}/>
+             <InputButton value={4} handleChangeRateNote={setRateNote}/>
+             <InputButton value={5} handleChangeRateNote={setRateNote}/>
             
            </div>
  
