@@ -12,7 +12,7 @@ export function Cardinicial({ setRateNote, setSubmited, rateNote }) {
       }
 
     return(
-        <div className="bg-radial-gradient max-w-103 px-6 pt-6 pb-8  rounded-2xlfont-overpass">
+        <div className="bg-radial-gradient max-w-103 px-6 pt-6 pb-8  rounded-2xlfont-overpass rounded-4xl shadow-2xl">
         <div className="bg-dark-blue p-4 w-fit rounded-full mb-4">
          <img src={iconStar} alt="" srcset="ícone da estrela" />
         </div>
